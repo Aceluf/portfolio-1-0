@@ -1,0 +1,11 @@
+:root {
+    --mainColor: hsl(282, 20%, 25%);
+    --secondaryColor: hsl(280, 20%, 21%);
+    --borderColor: hsl(96, 11%, 9%);
+    --mainText: hsl(0, 0%, 100%);
+    --secondaryText: hsl(0, 0%, 93%);
+    --themeDotBorder: hsl(0, 0%, 100%);
+    --previewBg: hsla(284, 21%, 10%, 0.8);
+    --previewShadow: hsl(284, 19%, 15%);
+    --btnColor: hsl(284, 52%, 42%);
+}
