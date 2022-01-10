@@ -20,6 +20,28 @@
     <link rel="stylesheet" href="css/style.css">
 
     <link id="theme-style" rel="stylesheet" href="">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_vq6uqrQznWLcD48QTCjoX");
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_lgt4dv4', 'template_mgei2la', this)
+                    .then(function () {
+                        console.log('SUCCESS!');
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
     <title>Raja SOUMOLA</title>
 </head>
 
@@ -45,7 +67,7 @@
                     </ul>
                 </div>
                 <div class="left-column">
-                    <img class="profile-pic" src="images/profile-0.jpg" alt="">
+                    <img class="profile-pic" src="images/profile-1.jpg" alt="Raja Soumola">
                     <h5 style="text-align: center; line-height: 0;">Personalize Theme</h5>
                     <div class="themes-wrapper">
                         <div id="light-mode" data-mode="light" class="theme-dot"></div>
@@ -91,6 +113,7 @@
                             <li>Html</li>
                             <li>Css</li>
                             <li>JavaScript</li>
+                            <li>WordPress</li>
                         </ul>
                         <ul>
                             <li>VueJS</li>
@@ -155,18 +178,19 @@
     <section id="contact" class="contact-section">
         <div class="main-container">
             <h3 style="text-align: center; margin-top: 10px;">Get In Touch</h3>
-            <form id="contact-form" action="">
-                <label for="Name">Name</label>
-                <input class="input-field" type="text" name="Name">
+            <form id="contact-form">
+                <input type="hidden" name="contact_number">
+                <label for="from_name">Name</label>
+                <input id="from_name" class="input-field" type="text" name="from_name">
 
-                <label for="Subject">Subject</label>
-                <input class="input-field" type="text" name="Subject">
+                <label for="to_name">to</label>
+                <input id="to_name" class="input-field" type="text" name="to_name">
 
-                <label for="Email">Email</label>
-                <input class="input-field" type="email" name="Email">
+                <label for="from_email">Email</label>
+                <input id="from_email" class="input-field" type="email" name="from_email">
 
-                <label for="Message">Message</label>
-                <textarea class="input-field" type="text" name="Message"></textarea>
+                <label for="message">Message</label>
+                <textarea id="message" class="input-field" type="text" name="message"></textarea>
                 <input id="submit-btn" type="submit" value="Send">
             </form>
         </div>

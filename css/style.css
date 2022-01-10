@@ -381,6 +381,10 @@ h6 { font-size: 1rem;}
     font-size: 14px;
 }
 
+.red-input {
+    border-color: hsl(0, 100%, 50%);
+}
+
 #submit-btn {
     margin-top: 10px;
     width: 100%;
@@ -389,6 +393,7 @@ h6 { font-size: 1rem;}
     color: hsl(0, 0%, 100%);
     background-color: var(--btnColor);
     border: none;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1200px) {
