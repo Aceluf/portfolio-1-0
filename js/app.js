@@ -1,93 +1,39 @@
-// variables
+// Bump this version alongside the CSS and script URLs in index.html when assets change.
+const assetVersion = '20261117-8'
 
-let theme = localStorage.getItem('theme')
+const themeStyles = {
+    light: 'css/style.css',
+    blue: 'css/style-blue.css',
+    green: 'css/style-green.css',
+    purple: 'css/style-purple.css',
+}
 
-let themeDots = document.getElementsByClassName('theme-dot')
+const themeButtons = document.querySelectorAll('.theme-dot')
+const themeStyle = document.getElementById('theme-style')
 
-let contactFields = {}
+function setTheme(mode) {
+    const selectedMode = Object.hasOwn(themeStyles, mode) ? mode : 'light'
 
-/*
-document.addEventListener("DOMContentLoaded", function () {
-    contactFields.name = document.getElementById("name")
-    contactFields.subject = document.getElementById("subject")
-    contactFields.email = document.getElementById("email")
-    contactFields.message = document.getElementById('message')
+    themeStyle.href = `${themeStyles[selectedMode]}?v=${assetVersion}`
+    themeButtons.forEach(button => {
+        button.setAttribute('aria-pressed', String(button.dataset.mode === selectedMode))
+    })
+
+    try {
+        localStorage.setItem('theme', selectedMode)
+    } catch {
+        // Theme switching still works when browser storage is unavailable.
+    }
+}
+
+themeButtons.forEach(button => {
+    button.addEventListener('click', () => setTheme(button.dataset.mode))
 })
 
-// check if the fields are not empty
-
-function isNotEmpty(value) {
-    if (value == null || typeof value == 'undefined') {
-        return false
-    }
-
-    return (value.length > 0)
+let savedTheme = 'light'
+try {
+    savedTheme = localStorage.getItem('theme') || 'light'
+} catch {
+    // Use the default theme when browser storage is unavailable.
 }
-
-// Email Validation
-
-function validateEmail(email) 
-{
-    const mailformat = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return mailformat.test(String(email).toLowerCase());
-
-}
-
-// Field Validation 
-
-function fieldValidation(field, validationFunction) {
-    if (field == null) return false
-    
-    let isFieldValid = validationFunction(field.value)
-    if (!isFieldValid) {
-        field.classList.add("red-input")
-    } else {
-        field.classList.remove("red-input")
-    }
-
-    return isFieldValid
-}
-
-function isValid() {
-    let valid = true
-
-    valid &= fieldValidation(contactFields.name, isNotEmpty)
-    valid &= fieldValidation(contactFields.email, validateEmail)
-    valid &= fieldValidation(contactFields.message, isNotEmpty)
-
-    return valid
-} */
-
-
-for (let i = 0; themeDots.length > i; i++) {
-    themeDots[i].addEventListener('click', () => {
-        let mode = themeDots[i].dataset.mode
-        setTheme(mode)
-    })
-}
-
-const setTheme = (mode) => {
-    if (mode === 'light') {
-        document.getElementById('theme-style').href = 'css/style.css'
-    }
-
-    if (mode === 'blue') {
-        document.getElementById('theme-style').href = 'css/style-blue.css'
-    }
-
-    if (mode === 'green') {
-        document.getElementById('theme-style').href = 'css/style-green.css'
-    }
-
-    if (mode === 'purple') {
-        document.getElementById('theme-style').href = 'css/style-purple.css'
-    }
-
-    localStorage.setItem('theme', mode)
-}
-
-if (theme === null) {
-    setTheme('light')
-} else {
-    setTheme(theme)
-}
+setTheme(savedTheme)

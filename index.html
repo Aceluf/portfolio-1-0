@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Raja Soumola, Frontend Engineer in Cotonou, Benin. TypeScript, React, SolidJS, and Vue.js. ERP/POS interfaces, frontend architecture, and complex business workflows.">
 
     <!-- Box Icons -->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
@@ -17,7 +18,7 @@
         rel="stylesheet">
 
     <!-- CSS Files -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=20261117-8">
 
     <link id="theme-style" rel="stylesheet" href="">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -42,7 +43,7 @@
             });
         }
     </script>
-    <title>Raja SOUMOLA</title>
+    <title>Raja Soumola | Frontend Engineer</title>
 </head>
 
 <body>
@@ -62,18 +63,19 @@
 
                     <ul class="navigation">
                         <li><a href="#about">About</a></li>
-                        <li><a href="#projects">Portfolio</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Work</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="left-column">
                     <img class="profile-pic" src="images/profile-1.jpg" alt="Raja Soumola">
-                    <h5 style="text-align: center; line-height: 0;">Personalize Theme</h5>
-                    <div class="themes-wrapper">
-                        <div id="light-mode" data-mode="light" class="theme-dot"></div>
-                        <div id="blue-mode" data-mode="blue" class="theme-dot"></div>
-                        <div id="green-mode" data-mode="green" class="theme-dot"></div>
-                        <div id="purple-mode" data-mode="purple" class="theme-dot"></div>
+                    <h2 id="theme-label" class="theme-label">Personalize theme</h2>
+                    <div class="themes-wrapper" role="group" aria-labelledby="theme-label">
+                        <button type="button" id="light-mode" data-mode="light" class="theme-dot" aria-label="Light theme" aria-pressed="true"></button>
+                        <button type="button" id="blue-mode" data-mode="blue" class="theme-dot" aria-label="Blue theme" aria-pressed="false"></button>
+                        <button type="button" id="green-mode" data-mode="green" class="theme-dot" aria-label="Green theme" aria-pressed="false"></button>
+                        <button type="button" id="purple-mode" data-mode="purple" class="theme-dot" aria-label="Purple theme" aria-pressed="false"></button>
                     </div>
                     <p class="setting-note">*Theme settings will be saved for<br />your next visit</p>
                 </div>
@@ -82,12 +84,12 @@
                         <div class="preview">
                             <div id="corner-tl" class="corner"></div>
                             <div id="corner-tr" class="corner"></div>
-                            <h3>What I do</h3>
+                            <h2>Frontend Engineer</h2>
                             <p>
-                                I am a Front-End developer looking for <br />
-                                professional opportunities, to showcase <br />
-                                my skills and get better at codding
+                                I build complex business applications with TypeScript, React, and SolidJS,
+                                with a focus on UX, performance, and maintainable frontend architecture.
                             </p>
+                            <a href="resume.pdf" download="Raja-Soumola-CV-Frontend-engineer.pdf">Download my r&eacute;sum&eacute;</a>
                             <div id="corner-bl" class="corner"></div>
                             <div id="corner-br" class="corner"></div>
                         </div>
@@ -101,90 +103,276 @@
         <div class="main-container">
             <div class="about-wrapper">
                 <div class="about-me">
-                    <h4>More about me</h4>
-                    <p>I love exploring the internet to learn new skills and get better at web developement</p>
+                    <h2>About me</h2>
+                    <p>I'm a Frontend Engineer based in Cotonou, Benin. I translate complex business rules into
+                        simple, responsive interfaces that are easy to use and maintain.</p>
+                    <p>My work includes ERP and POS systems for sales, inventory, purchasing, cash registers,
+                        and logistics. I contribute to UX decisions, user journeys, and roles and permissions,
+                        and collaborate with backend developers to bring these workflows to life.</p>
                     <hr />
-                    <h4>MY SKILLS</h4>
-                    <p>Front-End developer with primary focus on Html, Css and JavaScript:<br /> You can download my<a
-                            target="_blank" href="resume.pdf"> resume</a>
-                    </p>
-                    <div class="skills">
-                        <ul>
-                            <li>Html</li>
-                            <li>Css</li>
-                            <li>JavaScript</li>
-                            <li>WordPress</li>
-                        </ul>
-                        <ul>
-                            <li>VueJS</li>
-                            <li>ReactJS</li>
-                            <li>Sass</li>
-                        </ul>
-                    </div>
+                    <h3>Skills</h3>
+                    <dl class="skills">
+                        <div>
+                            <dt>Frontend</dt>
+                            <dd>TypeScript, React, SolidJS, Vue.js, Next.js, Nuxt, TanStack Router / Start</dd>
+                        </div>
+                        <div>
+                            <dt>UI &amp; user experience</dt>
+                            <dd>Tailwind CSS, responsive design, reusable components</dd>
+                        </div>
+                        <div>
+                            <dt>Frontend architecture</dt>
+                            <dd>State management, REST APIs, authentication and authorization, performance,
+                                data-dense applications</dd>
+                        </div>
+                        <div>
+                            <dt>Product &amp; quality</dt>
+                            <dd>Requirements analysis, workflow design, ERP/POS, roles and permissions,
+                                identifying functional inconsistencies and risks</dd>
+                        </div>
+                        <div>
+                            <dt>Collaboration</dt>
+                            <dd>Frontend/backend collaboration, technical communication, teamwork, UX decisions</dd>
+                        </div>
+                    </dl>
                 </div>
 
                 <div class="social-links">
-                    <h3>Find me on Twitter, Linkedin and Github</h3>
+                    <h3>Find me online</h3>
                     <ul>
-                        <li class="social-link twitter">
-                            <a href="https://twitter.com/Aceluf7" title="twitter"><i class='bx bxl-twitter'></i></a>
-                        </li>
                         <li class="social-link linkedin">
-                            <a href="https://www.linkedin.com/in/raja-soumola-4098941b8/" title="linkedin"><i
-                                    class='bx bxl-linkedin-square'></i></a>
+                            <a href="https://www.linkedin.com/in/raja-soumola-4098941b8/" aria-label="Raja Soumola on LinkedIn"><i
+                                    class='bx bxl-linkedin-square' aria-hidden="true"></i></a>
                         </li>
                         <li class="social-link github">
-                            <a href="https://github.com/Aceluf" title="github"><i class='bx bxl-github'></i></a>
+                            <a href="https://github.com/Aceluf" aria-label="Aceluf on GitHub"><i class='bx bxl-github' aria-hidden="true"></i></a>
                         </li>
                     </ul>
+                    <p><a href="mailto:soumolaraja@gmail.com">soumolaraja@gmail.com</a></p>
+                    <div class="background-details">
+                        <h3>Education</h3>
+                        <p><strong>Bachelor's degree in Computer Networks and Telecommunications</strong></p>
+                        <p>UATM &middot; 2019 &middot; Cotonou, Benin</p>
+                        <h3>Languages</h3>
+                        <p>French &middot; Fluent<br>English &middot; Intermediate</p>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience-section">
+        <div class="main-container">
+            <h2 class="section-heading">Professional experience</h2>
+            <div class="experience-list">
+                <article id="experience-exowpee" class="experience">
+                    <div class="experience-heading">
+                        <h3>Frontend Engineer</h3>
+                        <p>Exowpee</p>
+                        <p class="experience-period"><time datetime="2026-02">Feb 2026</time> to
+                            <time datetime="2026-09">Sep 2026</time><br>Cotonou, Benin</p>
+                    </div>
+                    <div>
+                        <p>Developed a modular ERP/POS for commercial operations, inventory, purchasing,
+                            logistics, user management, sales, and cash registers.</p>
+                        <ul class="experience-highlights">
+                            <li>Built complex workflows with SolidJS, TypeScript, and Tailwind CSS.</li>
+                            <li>Developed product catalogs, inventory, POS, cash register, customer,
+                                purchasing, delivery, and logistics features.</li>
+                            <li>Contributed to UX and functional decisions for permissions, roles, and user journeys.</li>
+                            <li>Optimized data-heavy interfaces for low-end hardware and large catalogs.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article id="experience-protosen" class="experience">
+                    <div class="experience-heading">
+                        <h3>Frontend Developer</h3>
+                        <p>2TIC &middot; Protosen</p>
+                        <p class="experience-period"><time datetime="2025-01">Jan 2025</time> to
+                            <time datetime="2026-02">Feb 2026</time><br>Cotonou, Benin</p>
+                    </div>
+                    <ul class="experience-highlights">
+                        <li>Refactored the frontend architecture to stabilize the application and prepare it for production.</li>
+                        <li>Worked with the backend developer to fix issues and maintain the platform.</li>
+                        <li>Designed the UI/UX and developed the frontend for the Conferences module.</li>
+                        <li>Following the refactor, the platform remained stable for several months with no significant bug reports.</li>
+                    </ul>
+                </article>
+                <article class="experience">
+                    <div class="experience-heading">
+                        <h3>Nuxt Frontend Developer</h3>
+                        <p>Legal Entity &middot; Freelance</p>
+                        <p class="experience-period"><time datetime="2024-06">Jun 2024</time> to
+                            <time datetime="2025-10">Oct 2025</time><br>Cotonou, Benin</p>
+                    </div>
+                    <div>
+                        <p>Developed applications for finding medicinal plants and therapists, tools for
+                            professionals in the sector, and a platform for freelancers.</p>
+                        <ul class="experience-highlights">
+                            <li>Built responsive interfaces and reusable components with Nuxt and TypeScript.</li>
+                            <li>Integrated data and business APIs.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article id="experience-school" class="experience">
+                    <div class="experience-heading">
+                        <h3>React Frontend Developer</h3>
+                        <p>Legal Entity &middot; Freelance</p>
+                        <p class="experience-period"><time datetime="2024-05">May 2024</time> to
+                            <time datetime="2024-07">Jul 2024</time><br>Cotonou, Benin</p>
+                    </div>
+                    <div>
+                        <p>Developed a platform for parents to enroll their children and pay school fees,
+                            and for schools to manage classes, payments, and withdrawals.</p>
+                        <ul class="experience-highlights">
+                            <li>Built React interfaces for enrollment, payments, and school and parent management.</li>
+                            <li>Integrated the platform with backend services.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="experience">
+                    <div class="experience-heading">
+                        <h3>Nuxt Frontend Developer</h3>
+                        <p>Legal Entity &middot; Freelance</p>
+                        <p class="experience-period"><time datetime="2024-02">Feb 2024</time> to
+                            <time datetime="2024-05">May 2024</time><br>Cotonou, Benin</p>
+                    </div>
+                    <div>
+                        <p>Developed marketing websites and interfaces for collecting user requirements.</p>
+                        <ul class="experience-highlights">
+                            <li>Built responsive interfaces with Nuxt and Vue.js.</li>
+                            <li>Created multi-step forms to collect user requirements.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="experience">
+                    <div class="experience-heading">
+                        <h3>Nuxt Frontend Developer</h3>
+                        <p>Legal Entity &middot; Freelance</p>
+                        <p class="experience-period"><time datetime="2023-07">Jul 2023</time> to
+                            <time datetime="2023-09">Sep 2023</time><br>France</p>
+                    </div>
+                    <div>
+                        <p>Developed a printed-products e-commerce platform and an internal conversational application.</p>
+                        <ul class="experience-highlights">
+                            <li>Built the frontend with Nuxt and Vue.js.</li>
+                            <li>Integrated the OpenAI API into a conversational application for the team.</li>
+                        </ul>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
     <section id="projects" class="projects-section">
         <div class="main-container">
-            <h3 style="text-align: center; margin: 0 0 20px 0;">Some of my projects</h3>
+            <h2 class="section-heading">Selected work</h2>
             <div class="projects-wrapper">
-                <div class="project">
-                    <img class="thumbnail" src="images/fylo-dark-theme-design.jpg" alt="fylo dark theme design image">
+                <article class="project">
+                    <div class="project-image-space" aria-hidden="true"></div>
                     <div class="project-preview">
-                        <h6 class="project-title">Fylo dark theme landing page</h6>
-                        <p class="project-intro">A Front-End Mentor Challenge</p>
-                        <a href="https://fylo-dark-theme-landing-page-odgcvis85-aceluf.vercel.app/">Check it out ></a>
+                        <h3 class="project-title">Exowpee</h3>
+                        <p class="project-status">In development &middot; Private application</p>
+                        <p class="project-intro">A desktop and web ERP connecting sales, product catalogs,
+                            stock, purchasing, cash registers, and logistics.</p>
+                        <p class="project-contribution">I worked on frontend architecture, UX, and workflow design,
+                            keeping data-heavy screens usable on low-powered computers.</p>
+                        <p class="project-stack">SolidJS &middot; TypeScript &middot; Tailwind CSS</p>
+                        <div class="project-actions">
+                            <details class="project-details">
+                                <summary>Project details</summary>
+                                <h4>Workflows I designed and built</h4>
+                                <ul>
+                                    <li>Products, variants, options, prices, and unit conversions.</li>
+                                    <li>POS and cash register interfaces with permissions that depend on the active register.</li>
+                                    <li>Multi-store inventory, adjustments, stock movements, and transfers.</li>
+                                    <li>Purchasing, goods receipts, store allocation, costs, and supplier returns.</li>
+                                    <li>Logistics routes with multiple stops and stock operations at each waypoint.</li>
+                                </ul>
+                                <h4>Performance and architecture</h4>
+                                <p>Large catalogs and limited hardware shaped data loading, pagination,
+                                    list rendering, and component architecture.</p>
+                                <p>The POS uses a local architecture to avoid a backend request for every operation.
+                                    The wider platform uses Tauri, an embedded PostgreSQL database, and Kafka-based synchronization.</p>
+                            </details>
+                        </div>
                     </div>
-                </div>
-                <div class="project">
-                    <img class="thumbnail" src="images/intro-component-design.jpg" alt="intro component design image">
+                </article>
+                <article class="project">
+                    <a class="project-image-link" href="https://protosen.gouv.sn/" target="_blank" rel="noopener noreferrer">
+                        <img class="thumbnail" src="images/protosen-login.webp" width="1280" height="800"
+                            alt="Protosen login page with a sign-in form and a photograph of the ministry building"
+                            loading="lazy" decoding="async">
+                    </a>
                     <div class="project-preview">
-                        <h6 class="project-title">Intro component with signup form</h6>
-                        <p class="project-intro">A Front-End Mentor Challenge</p>
-                        <a href="https://intro-component-with-signup-form-three.vercel.app/">Check it out ></a>
+                        <h3 class="project-title">Protosen</h3>
+                        <p class="project-intro">An institutional platform for Senegal's foreign affairs ministry,
+                            managing visas, diplomatic cards, and conferences.</p>
+                        <p class="project-contribution">At 2TIC, I refactored and stabilized the existing frontend with
+                            the backend developer, then designed and built the Conferences module.</p>
+                        <p class="project-stack">Next.js &middot; React &middot; TypeScript &middot; Tailwind CSS &middot; REST APIs</p>
+                        <div class="project-actions">
+                            <details class="project-details">
+                                <summary>Project details</summary>
+                                <h4>Taking over an existing frontend</h4>
+                                <p>I restructured the application to make maintenance and future development easier,
+                                    fixed existing features, and integrated backend APIs.</p>
+                                <p>After the refactor and stabilization, the platform ran for several months
+                                    without significant bug reports.</p>
+                                <h4>Conference management</h4>
+                                <p>My work covered screen design, user journeys, frontend workflows,
+                                    and integration with the conference APIs.</p>
+                                <p>In production with restricted access. The screenshot shows the public login page.</p>
+                            </details>
+                            <a class="project-site-link" href="https://protosen.gouv.sn/" target="_blank" rel="noopener noreferrer">Visit Protosen</a>
+                        </div>
                     </div>
-                </div>
-                <div class="project">
-                    <img class="thumbnail" src="images/single-price-grid-design.jpg"
-                        alt="single price grid design image">
+                </article>
+                <article class="project">
+                    <a class="project-image-link" href="https://woway.co/" target="_blank" rel="noopener noreferrer">
+                        <img class="thumbnail" src="images/woway-homepage.webp" width="1280" height="800"
+                            alt="Woway homepage introducing professional mini-sites, product catalogs, and service providers"
+                            loading="lazy" decoding="async">
+                    </a>
                     <div class="project-preview">
-                        <h6 class="project-title">Single price grid</h6>
-                        <p class="project-intro">A Front-End Mentor Challenge</p>
-                        <a href="https://sinple-price-grid-pxlvwlhfh.vercel.app/">Check it out ></a>
+                        <h3 class="project-title">Woway</h3>
+                        <p class="project-intro">A platform for independent sellers and service providers
+                            to create a professional shop, publish their offer, and receive orders through WhatsApp.</p>
+                        <p class="project-contribution">Frontend work spans onboarding, product and service catalogs,
+                            customizable mini-sites, subscriptions, and payment flows.</p>
+                        <p class="project-stack">Vue.js &middot; TypeScript &middot; Tailwind CSS &middot; Pinia &middot; TanStack Query</p>
+                        <div class="project-actions">
+                            <details class="project-details">
+                                <summary>Project details</summary>
+                                <h4>From signup to a shareable shop</h4>
+                                <p>Multi-step onboarding guides sellers through their business identity, products
+                                    or services, shop theme, and shareable mini-site.</p>
+                                <p>Seller tools cover catalogs, categories, promotions, subscriptions, and payments.
+                                    Public shops let customers browse an offer and contact the seller.</p>
+                                <h4>Designed for everyday mobile use</h4>
+                                <p>The application supports French and English, responsive layouts, and recovery
+                                    from failed requests without discarding entered form data.</p>
+                                <p>TanStack Query manages server data; Pinia manages authentication and local workflow state.</p>
+                            </details>
+                            <a class="project-site-link" href="https://woway.co/" target="_blank" rel="noopener noreferrer">Visit Woway</a>
+                        </div>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact-section">
         <div class="main-container">
-            <h3 style="text-align: center; margin-top: 10px;">Get In Touch</h3>
+            <h2 class="section-heading">Get in touch</h2>
+            <p class="contact-details">Based in Cotonou, Benin. Email me at
+                <a href="mailto:soumolaraja@gmail.com">soumolaraja@gmail.com</a>.</p>
             <form id="contact-form">
                 <input type="hidden" name="contact_number">
                 <label for="from_name">Name</label>
                 <input id="from_name" class="input-field" type="text" name="from_name">
 
-                <label for="to_name">to</label>
-                <input id="to_name" class="input-field" type="text" name="to_name">
+                <input type="hidden" name="to_name" value="Raja Soumola">
 
                 <label for="from_email">Email</label>
                 <input id="from_email" class="input-field" type="email" name="from_email">
@@ -195,7 +383,7 @@
             </form>
         </div>
     </section>
-    <script src="js/app.js"></script>
+    <script src="js/app.js?v=20261117-8"></script>
 </body>
 
 </html>

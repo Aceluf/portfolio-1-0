@@ -8,4 +8,6 @@
     --previewBg: hsla(90, 11%, 32%, 0.8);
     --previewShadow: hsl(90, 12%, 16%);
     --btnColor: hsl(120, 20%, 50%);
+    --linkColor: hsl(90, 65%, 88%);
+    --cardBorderColor: hsl(90, 14%, 43%);
 }
